@@ -1,3 +1,65 @@
-hello, apa kabar?
-ESC
+- buka git
+- ketik : pwd , kemudian enter
+- ketik: cd ~/desktop
+- ketik: ls
+- ketik: mkdir latihan_b19
+- cd latihan_b19
 
+- echo "This is test file" >> testFile.txt
+- touch tes.txt . untuk buat file saja
+- vim tes.txt, kemudian tulis `saya` di filenya. exit dgn ESC kemudian ketik wq.
+- rm -r latihan_b19 . untuk hapus direktori dan file didalamnya
+- rm -i d.txt . buat konfirmasi apakah mau di hapus atau tidak
+- rm /home/irfan/latihan_b19/*  . remove semua file dalam dir
+
+
+- cd ~/.ssh/ 
+- ssh-keygen -t rsa atau ssh-keygen -t ed25519 -C your_email@example.com
+- ketika irfan atau kosingin saja. di Enter file in which to save the key (/c/Users/Dell/.ssh/id_rsa):
+- passpharse lewatkan saja atau enter
+- enter lagi
+- cek dgn ls. akan ada file irfan dan irfan.pub
+- cat ~/.ssh/irfan.pub. atau clip < ~/.ssh/id_ed25519.pub
+- copy ssh key ke github https://github.com/settings/keys
+
+- ssh-agent bash
+- eval `ssh-agent -s` atau eval "$(ssh-agent -s)"
+- ssh-add Irfan atau ssh-add ~/.ssh/id_ed25519
+- atur config
+
+Host *
+ AddKeystoAgent yes
+ IndentityFile ~/.ssh/irfan
+
+Membuat repo baru:
+- buka github, kemudian buat repo
+- select SHH bukan http dan copy link repo yg SSH
+
+- masuk ke project latihan_b19
+- echo "# yuhuuu" >> README.md
+- git init
+- git git add .
+- git status
+- git commit -m "Commit pertama" . Menambahkan pesan setiap revisi
+- git remote add origin git@github.com:Sardiirfan27/yuhuuu.git
+- git push origin master . apabila posisi git saat ini di master.
+
+cabang:
+- git branch Irfan #buat cabang Irfan
+- git checkout –b Irfan #pindah ke cabang Irfan, apabila Irfan gak ada bikin cabang Irfan
+- git branch #melihat semua cabang yg ada di repo
+- git checkout joko #pindah kecabang joko 
+
+- hapus cabang: git branch -d tuti
+ 
+
+Cara buat push ke classroom:
+- Bikin dulu folder baru
+- buka git dan ketik: git init
+- git clone git@github.com:H8-Assignments-Bay/latihan_git_19-Sardiirfan27.git
+- nanti muncul folder baru misal folder latihan_git_19-Sardiirfan27.
+- ketik: cd latihan_git_19-Sardiirfan27
+- pindahkan atau masukan file project yg telah kita buat kedalam folder latihan_git_19-Sardiirfan27
+- git add . 
+- git commit -m 'tugas GC1'
+- git push origin main
