@@ -14,7 +14,7 @@
 
 
 - cd ~/.ssh/ 
-- ssh-keygen -t rsa atau ssh-keygen -t ed25519 -C your_email@example.com
+- ssh-keygen -t ed25519 -C your_email@example.com
 - ketika irfan atau kosingin saja. di Enter file in which to save the key (/c/Users/Dell/.ssh/id_rsa):
 - passpharse lewatkan saja atau enter
 - enter lagi
@@ -33,7 +33,11 @@ Host *
 
 Membuat repo baru:
 - buka github, kemudian buat repo
-- select SHH bukan http dan copy link repo yg SSH
+- select SHH bukan http 
+- git init
+- git config --global user.name “Jon Rosado”
+- git config --global user.email “jon.rodado42@gmail.com"
+
 
 - masuk ke project latihan_b19
 - echo "# yuhuuu" >> README.md
